@@ -14,3 +14,6 @@ def readFile(path):
 
 def sortArea(data):
     return sorted(data, key = lambda x: x["area"], reverse = True)
+
+def sortPopulation(data):
+    return sorted(data, key = lambda x: x["population"], reverse = True)
