@@ -17,3 +17,14 @@ def sortArea(data):
 
 def sortPopulation(data):
     return sorted(data, key = lambda x: x["population"], reverse = True)
+
+if __name__ == "__main__":
+    data = readFile("data.txt")
+
+    areaTxt = sortArea(data)
+    for country in areaTxt:
+        print(f"{country["country"]}: {country["area"]}")
+
+    populationTxt = sortPopulation(data)
+    for country in populationTxt:
+        print(f"{country["country"]}: {country["population"]}")
