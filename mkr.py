@@ -11,3 +11,6 @@ def readFile(path):
             })
     
     return data
+
+def sortArea(data):
+    return sorted(data, key = lambda x: x["area"], reverse = True)
