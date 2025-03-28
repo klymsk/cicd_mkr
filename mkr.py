@@ -1,3 +1,7 @@
+import os
+
+print("Поточна робоча директорія:", os.getcwd())
+
 def readFile(path):
     with open(path, "r") as file:
         data = []
@@ -19,12 +23,12 @@ def sortPopulation(data):
     return sorted(data, key = lambda x: x["population"], reverse = True)
 
 if __name__ == "__main__":
-    data = readFile("data.txt")
+    dataTxt = readFile("data.txt")
 
-    areaTxt = sortArea(data)
+    areaTxt = sortArea(dataTxt)
     for country in areaTxt:
-        print(f"{country["country"]}: {country["area"]}")
+        print(f'{country["country"]}: {country["area"]}')
 
-    populationTxt = sortPopulation(data)
+    populationTxt = sortPopulation(dataTxt)
     for country in populationTxt:
-        print(f"{country["country"]}: {country["population"]}")
+        print(f'{country["country"]}: {country["population"]}')
