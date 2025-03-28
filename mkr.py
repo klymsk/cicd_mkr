@@ -1,0 +1,13 @@
+def readFile(path):
+    with open(path, "r") as file:
+        data = []
+        for line in file:
+            country, area, population = line.strip().split(",")
+            
+            data.append({
+                "country": country,
+                "area": int(area),
+                "population": int(population)
+            })
+    
+    return data
